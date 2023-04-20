@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: linear-gradient(140deg,rgb(123, 0, 0),rgb(161, 3, 3),rgb(255, 0, 0), rgb(235, 58, 58), rgb(246, 98, 98));
+    height: 100vh;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+#app{
+    width: 20%;
+    height: 60%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.827);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 11px 9px 9px  rgb(21, 21, 21);
+}
+
+.botao_1{
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    cursor: pointer;
+    margin: 3px;
+    background-color: rgb(31, 31, 31);
+    border: none;
+    color: white;
+}
+
+.botao_1:active{
+    background-color: rgb(20, 137, 239);
+}
+
+button{
+    padding: 5px;
+    width: 30%;
+    font-size: 25px;
+    cursor: pointer;
+    margin: 3px;
+    background-color: rgb(31, 31, 31);
+    border: none;
+    color: white;
+    box-shadow: -2px 3.2px 0 #2c2c2c, -2.8px 5px 0 #000;
+}
+
+button:hover{
+    background-color: black;
+}
+
+button:active{
+    box-shadow: inset -2.8px 2.8px 0 #2c2c2c;
+}

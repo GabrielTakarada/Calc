@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora Vue.js</title>
+    <link rel="stylesheet" href="Calculadora.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+</head>
+<body>
+    <div id="app">
+        <h1> CALCULADORA 🧮</h1>
+        <br></br>
+        <div id="calculator">
+            <input type="text" v-model="value" id="display" readonly>
+            <br></br>
+            <div>
+                <button v-for="button in buttons" :key="button" @click="calculate(button)" :id="button === 'C' ? 'clear-entry' : button === 'CE' ? 'clear-all' : ''">{{ button }}</button>
+            </div>
+        </div>
+        <br></br>
+        <h3> Gabriel Silva Takarada</h3>
+    </div>
+    
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                value: '',
+                buttons: ['C', 'CE', '*',  '/',
+                '+', '-', '.', '0','=' ,
+                '1', '2', '3', '4',
+                '5', '6', '7', '8','9',
+                ]
+            },
+            methods: {
+                calculate: function(button) {
+    if (button === '=') {
+        this.value = eval(this.value);
+    } else if (button === 'C') {
+        this.value = '';
+    } else if (button === 'CE') {
+        this.value = this.value.slice(0, -1);
+    } else {
+        this.value += button;
+    }
+}
+
+                
+            }
+        
+        });
+    </script>
+</body>
+</html>
